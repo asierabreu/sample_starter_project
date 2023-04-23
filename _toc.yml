@@ -1,8 +1,7 @@
 # In _toc.yml
 format: jb-book
-root: intro
+root: docs/intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
-- file: samplemarkdownfile
+- file: docs/markdown
+- file: docs/markdown-notebooks
+- file: docs/markdown-documentation

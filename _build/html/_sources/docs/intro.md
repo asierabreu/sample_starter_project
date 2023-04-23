@@ -4,9 +4,9 @@ The _Starter_ level project helps you understand what type of delivery you shoul
 
 
 
-![sample ](./sample_starter_project.png)
+![sample ](./pics/sample_starter_project.png)
 
-## The workflow
+## The project workflow
  
   1. Initial kick-off chat to understand the context of your problem , your goal and any time constrains you may have.
   2. I provide an estimate of the involved work to you and start working on the implementation.
@@ -16,7 +16,7 @@ The _Starter_ level project helps you understand what type of delivery you shoul
 
   *Iterative workflow:* should you need more revisions (please see prices) we do further iterations (steps 1 to 3).    
 
-## The output (deliverables)
+## The project deliverables
 
 The output of the project would (typically) be :
 

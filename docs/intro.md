@@ -1,10 +1,8 @@
-# Welcome to Starter Learning Framework
+# IntelliTools: Starter Learning Framework
 
-The _Starter_ level project helps you understand what type of delivery you should expect from this project type.
+Welcome to the The _Starter_ level Learnign Framework. This documentation helps you understand what type of delivery you should expect from this project.
 
-
-
-![sample ](./sample_starter_project.png)
+![sample ](./pics/sample_starter_project.png)
 
 ## The project workflow
  
