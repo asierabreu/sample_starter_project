@@ -3,7 +3,7 @@
 
 title: Sample Starter ML Project
 author: Asier Abreu Aramburu
-logo: pics/starter_logo.png
+logo: pics/sample_starter_project_logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

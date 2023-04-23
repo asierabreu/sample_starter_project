@@ -14,4 +14,12 @@ kernelspec:
 
 # Sample Notebooks
 
-This is a sample of typicall data collection, preprocessing , modeling and prediction over toy datasets in regression and classification machine learning tasks.
+This is a sample of Jupyter notebooks , an interactive web based development tool that contains code , declarative text 
+that is commonly used in Data Science.
+
+The notebooks in this sample contain data preprocessing, modeling and prediction over toy datasets in regression and classification machine learning tasks.
+
+Sample Notebooks:
+
+ - [Regression Sample Notebook](./sample_notebook_regression.md) 
+ - [Classification Sample Notebook](./sample_notebook_classification.md)
