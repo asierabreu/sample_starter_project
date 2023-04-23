@@ -2,6 +2,7 @@
 format: jb-book
 root: docs/intro
 chapters:
-- file: docs/markdown
 - file: docs/markdown-notebooks
+  sections:
+    - file: docs/sample_notebook_regression.md
 - file: docs/markdown-documentation

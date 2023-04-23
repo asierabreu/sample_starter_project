@@ -1,8 +1,6 @@
-# IntelliTools: Starter Learning Framework
+# Starter Learning Framework
 
-Welcome to the The _Starter_ level Learnign Framework. This documentation helps you understand what type of delivery you should expect from this project.
-
-![sample ](./pics/sample_starter_project.png)
+Welcome to IntelliTools: _Starter_ level Learnign Framework. This documentation helps you understand what type of delivery you should expect from this project.
 
 ## The project workflow
  
@@ -12,7 +10,7 @@ Welcome to the The _Starter_ level Learnign Framework. This documentation helps 
   4. I provide the project deliverables (see below).
   5. We conclude the project with a final 'sign-off' chat.  
 
-  *Iterative workflow:* should you need more revisions (please see prices) we do further iterations (steps 1 to 3).    
+  *Iterative workflow:* should you need more revisions we do further iterations (steps 1 to 3).    
 
 ## The project deliverables
 
@@ -29,7 +27,3 @@ The output of the project would (typically) be :
 ## Feedback (Please!)
 
 Feedback helps consolidating my professional image so ... as usual is very much appreciated!!
-
-
-```{tableofcontents}
-```
