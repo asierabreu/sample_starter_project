@@ -351,15 +351,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection-a-name-inspection-a">Data Inspection <a name="inspection"></a></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-definition-a-name-model-definition-a">Model Definition <a name="model definition"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection-a-name-inspection-a">Data Inspection <a name="inspection"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-a-name-preprocessing-a">Preprocessing <a name="preprocessing"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-name-modeling-a">Modeling <a name="modeling"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1-basic-net">Approach 1: Basic net</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2-pre-trained-net">Approach 2: Pre-trained net</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training-a-name-model-training-a">Model Training <a name="model training"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-a-name-model-evaluation-a">Model Evaluation <a name="model evaluation"></a></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-a-name-prediction-a">Prediction <a name="prediction"></a></a></li>
 </ul>
             </nav>
         </div>
@@ -386,9 +387,9 @@ We will use two different approaches:</p>
 <ul class="simple">
 <li><p>Loading</p></li>
 <li><p>Inspection</p></li>
-<li><p>Preprocessing</p></li>
 </ul>
 </li>
+<li><p><span class="xref myst">Preprocessing</span></p></li>
 <li><p><span class="xref myst">Modeling</span></p>
 <ul class="simple">
 <li><p>Approach 1 : Basic Convolutional net</p></li>
@@ -421,15 +422,8 @@ We will use two different approaches:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/asierabreu/opt/anaconda3/envs/venv/lib/python3.6/site-packages/tqdm/auto.py:22: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
 </pre></div>
 </div>
 </div>
@@ -586,8 +580,9 @@ label tensor type: tf.Tensor(7, shape=(), dtype=int64)
 </div>
 </div>
 <p>There is not a large imbalance , so data augmentation is not essential here</p>
-<section id="preprocessing">
-<h3>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="preprocessing-a-name-preprocessing-a">
+<h2>Preprocessing <a name="preprocessing"></a><a class="headerlink" href="#preprocessing-a-name-preprocessing-a" title="Permalink to this heading">#</a></h2>
 <p>We want to preprocess the images in order to speed up training. Here we :</p>
 <ol class="arabic simple">
 <li><p>cache</p></li>
@@ -630,9 +625,8 @@ label tensor type: tf.Tensor(7, shape=(), dtype=int64)
 </div>
 </div>
 </div>
-</section>
-<section id="model-definition-a-name-model-definition-a">
-<h3>Model Definition <a name="model definition"></a><a class="headerlink" href="#model-definition-a-name-model-definition-a" title="Permalink to this heading">#</a></h3>
+<section id="modeling-a-name-modeling-a">
+<h3>Modeling <a name="modeling"></a><a class="headerlink" href="#modeling-a-name-modeling-a" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
@@ -947,6 +941,9 @@ Epoch 3/10
 <h3>Model Evaluation <a name="model evaluation"></a><a class="headerlink" href="#model-evaluation-a-name-model-evaluation-a" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
+<section id="prediction-a-name-prediction-a">
+<h2>Prediction <a name="prediction"></a><a class="headerlink" href="#prediction-a-name-prediction-a" title="Permalink to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -999,15 +996,16 @@ Epoch 3/10
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection-a-name-inspection-a">Data Inspection <a name="inspection"></a></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-definition-a-name-model-definition-a">Model Definition <a name="model definition"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-inspection-a-name-inspection-a">Data Inspection <a name="inspection"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-a-name-preprocessing-a">Preprocessing <a name="preprocessing"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-a-name-modeling-a">Modeling <a name="modeling"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1-basic-net">Approach 1: Basic net</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2-pre-trained-net">Approach 2: Pre-trained net</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training-a-name-model-training-a">Model Training <a name="model training"></a></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation-a-name-model-evaluation-a">Model Evaluation <a name="model evaluation"></a></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-a-name-prediction-a">Prediction <a name="prediction"></a></a></li>
 </ul>
   </nav></div>
 

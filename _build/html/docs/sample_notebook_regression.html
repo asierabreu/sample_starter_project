@@ -370,7 +370,7 @@ document.write(`
 <p>This is a sample notebook for a regression type of ML application</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -384,7 +384,7 @@ document.write(`
 <h2>Data Loading<a class="headerlink" href="#data-loading" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and summarize the california housing dataset</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># load and summarize the california housing dataset</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_california_housing</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">fetch_california_housing</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">as_frame</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -393,25 +393,15 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># checkout the structure and shape of the dataset</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># checkout the structure and shape of the dataset</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;data&#39;, &#39;target&#39;, &#39;frame&#39;, &#39;target_names&#39;, &#39;feature_names&#39;, &#39;DESCR&#39;])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(20640, 8)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
@@ -427,26 +417,18 @@ document.write(`
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># inspect dataset</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset instances : </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">len</span>(dataset.data))
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset features  : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">len</span>(dataset.feature_names))
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset atributes : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">dataset</span>.feature_names)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset feature   : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">dataset</span>.target_names)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dataset instances : 20640
-dataset features  : 8
-dataset atributes : [&#39;MedInc&#39;, &#39;HouseAge&#39;, &#39;AveRooms&#39;, &#39;AveBedrms&#39;, &#39;Population&#39;, &#39;AveOccup&#39;, &#39;Latitude&#39;, &#39;Longitude&#39;]
-dataset feature   : [&#39;MedHouseVal&#39;]
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># inspect dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset instances : </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset features  : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_names</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset atributes : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dataset feature   : </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">dataset</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">target</span>
 </pre></div>
 </div>
@@ -454,143 +436,19 @@ dataset feature   : [&#39;MedHouseVal&#39;]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Distributions</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Distributions</span>
 <span class="n">X</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/fa2813052969df31de70ae043e3057233701baedd291145ede2a9104d774168b.png" src="../_images/fa2813052969df31de70ae043e3057233701baedd291145ede2a9104d774168b.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic statistics</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic statistics</span>
 <span class="n">X</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>MedInc</th>
-      <th>HouseAge</th>
-      <th>AveRooms</th>
-      <th>AveBedrms</th>
-      <th>Population</th>
-      <th>AveOccup</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-      <td>20640.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>3.870671</td>
-      <td>28.639486</td>
-      <td>5.429000</td>
-      <td>1.096675</td>
-      <td>1425.476744</td>
-      <td>3.070655</td>
-      <td>35.631861</td>
-      <td>-119.569704</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.899822</td>
-      <td>12.585558</td>
-      <td>2.474173</td>
-      <td>0.473911</td>
-      <td>1132.462122</td>
-      <td>10.386050</td>
-      <td>2.135952</td>
-      <td>2.003532</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.499900</td>
-      <td>1.000000</td>
-      <td>0.846154</td>
-      <td>0.333333</td>
-      <td>3.000000</td>
-      <td>0.692308</td>
-      <td>32.540000</td>
-      <td>-124.350000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2.563400</td>
-      <td>18.000000</td>
-      <td>4.440716</td>
-      <td>1.006079</td>
-      <td>787.000000</td>
-      <td>2.429741</td>
-      <td>33.930000</td>
-      <td>-121.800000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>3.534800</td>
-      <td>29.000000</td>
-      <td>5.229129</td>
-      <td>1.048780</td>
-      <td>1166.000000</td>
-      <td>2.818116</td>
-      <td>34.260000</td>
-      <td>-118.490000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>4.743250</td>
-      <td>37.000000</td>
-      <td>6.052381</td>
-      <td>1.099526</td>
-      <td>1725.000000</td>
-      <td>3.282261</td>
-      <td>37.710000</td>
-      <td>-118.010000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>15.000100</td>
-      <td>52.000000</td>
-      <td>141.909091</td>
-      <td>34.066667</td>
-      <td>35682.000000</td>
-      <td>1243.333333</td>
-      <td>41.950000</td>
-      <td>-114.310000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p>From the histograms and basic statistics we can already see here 2 important points regarding the dataset:</p>
 <ol class="arabic simple">
@@ -604,7 +462,7 @@ dataset feature   : [&#39;MedHouseVal&#39;]
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlations between feature and target</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlations between feature and target</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="n">corr</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">corr</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_precision</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -624,24 +482,16 @@ dataset feature   : [&#39;MedHouseVal&#39;]
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/6c8894e9286ba3f89b81248da62b070c679e6c0f0fe042222cc1cec2527c44c1.png" src="../_images/6c8894e9286ba3f89b81248da62b070c679e6c0f0fe042222cc1cec2527c44c1.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># outlier detection using covariance</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># outlier detection using covariance</span>
 <span class="kn">from</span> <span class="nn">sklearn.covariance</span> <span class="kn">import</span> <span class="n">EllipticEnvelope</span>
 <span class="n">cov</span> <span class="o">=</span> <span class="n">EllipticEnvelope</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="c1"># check outliers on each attribute : predict returns 1 for an inlier and -1 for an outlier</span>
 <span class="n">covariances</span><span class="o">=</span><span class="n">cov</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">outliers</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">covariances</span><span class="p">))</span> <span class="k">if</span> <span class="n">covariances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;found : </span><span class="si">%2d</span><span class="s1"> outliers in data&#39;</span> <span class="o">%</span><span class="k">len</span>(outliers))
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found : 2064 outliers in data
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;found : </span><span class="si">%2d</span><span class="s1"> outliers in data&#39;</span> <span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -653,7 +503,7 @@ We could use this in order to select stronger features for training.</p>
 <h2>Model Training<a class="headerlink" href="#model-training" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply transformations to the attrributes and target</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># apply transformations to the attrributes and target</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">X_scaled</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> 
 <span class="n">y_scaled</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
@@ -663,7 +513,7 @@ We could use this in order to select stronger features for training.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># evaluate several regression algorithms on the dataset and create several models</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># evaluate several regression algorithms on the dataset and create several models</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">ElasticNet</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
@@ -693,24 +543,13 @@ We could use this in order to select stronger features for training.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model : LinearRegression         Mean MAE: 0.110 (0.002)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model : ElasticNet               Mean MAE: 0.188 (0.003)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model : RandomForestRegressor    Mean MAE: 0.071 (0.002)
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="model-predict">
 <h2>Model Predict<a class="headerlink" href="#model-predict" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the best model and make a prediction with it</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the best model and make a prediction with it</span>
 <span class="n">selected_model</span><span class="o">=</span><span class="s1">&#39;RandomForestRegressor&#39;</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">selected_model</span><span class="p">]</span>
 <span class="c1"># fit model</span>
@@ -723,16 +562,7 @@ We could use this in order to select stronger features for training.</p>
 <span class="n">y_predicted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_housing_data_scaled</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 <span class="n">y_scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <span class="c1"># summarize prediction , inverse back the scaled prediction</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;House Predicted Value (KDollar): </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">y_scaler</span>.inverse_transform(y_predicted.reshape(-1,1)))
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/asierabreu/opt/anaconda3/envs/venv/lib/python3.6/site-packages/ipykernel_launcher.py:5: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel().
-  &quot;&quot;&quot;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>House Predicted Value (KDollar): 3.496
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;House Predicted Value (KDollar): </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="n">y_scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">y_predicted</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
