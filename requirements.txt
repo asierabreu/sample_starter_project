@@ -5,4 +5,9 @@ numpy
 pandas
 scipy
 json
+tdqm
 scikit-learn
+tensorflow
+tensorflow_datasets
+tensorflow_hub
+tensorflow_addons
