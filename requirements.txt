@@ -4,7 +4,6 @@ seaborn
 numpy
 pandas
 scipy
-json
 tdqm
 scikit-learn
 tensorflow
