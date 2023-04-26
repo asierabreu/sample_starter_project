@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Sample Notebooks
+## Sample Notebooks
 
 This is a sample of Jupyter notebooks , an interactive web based development tool that contains code , declarative text 
 that is commonly used in Data Science.

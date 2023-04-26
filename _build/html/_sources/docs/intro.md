@@ -4,7 +4,7 @@ Welcome to IntelliTools _Starter_ Learning Framework. This documentation helps y
 
 ## The project workflow
  
- ```{note}
+```{note}
 Initial kick-off chat to understand the context of your problem , your goal and any time constrains you may have.
 ```
 
@@ -12,7 +12,7 @@ Initial kick-off chat to understand the context of your problem , your goal and 
   2. A revision chat is agreed where I present and explain you the work performed and results.
   3. I provide the project deliverables (see below).
   
-   ```{note}
+```{note}
 We conclude the project with a final 'sign-off' chat. 
 ```
 
