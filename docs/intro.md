@@ -25,6 +25,10 @@ The output of the project would (typically) be :
   1. A Jupyter notebook or Python code file (.ipynb or .py format).
   2. A user manual document (pdf,docx) file with overview instructions on how to execute the provided code.
 
+## The timescales
+
+Every iteration of this project will consist of 3 working weeks (15 work days) 
+
 ## Communication
 
   - Initial communication via Upwork communication channels
