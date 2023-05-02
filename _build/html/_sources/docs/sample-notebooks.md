@@ -23,3 +23,4 @@ Sample Notebooks:
 
  - [Regression Sample Notebook](./sample_notebook_regression.md) 
  - [Classification Sample Notebook](./sample_notebook_classification.md)
+ - [Visualization Sample Notebook](./sample_notebook_visualization.md)
